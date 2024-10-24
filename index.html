@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BabyExplorer</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Estilos CSS adicionales para la demostración */
+        .highlight {
+            border: 2px solid gold;
+            background-color: #f0f8ff;
+        }
+        .emphasized {
+            border: 2px dashed red;
+            background-color: #ffe4e1;
+        }
+        .card {
+            display: inline-block;
+            background-color: rgba(79, 172, 254, 0.2); /* Fondo suave azul claro */
+            border: 2px solid rgba(79, 172, 254, 0.5); /* Borde azul claro con opacidad */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            margin: 15px;
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        /* Efecto de hover para tarjetas */
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo para los menús */
+        nav {
+            margin-bottom: 20px;
+        }
+
+        .top-menu {
+            margin-bottom: 20px;
+            background-color: #4facfe; /* Fondo azul */
+            padding: 10px;
+        }
+
+        .top-menu a {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .top-menu a:hover {
+            background-color: #1a75ff;
+        }
+
+        .side-menu {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background-color: #f0f0f0; /* Fondo gris claro */
+        }
+
+        .side-menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .side-menu li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Bienvenidos a BabyExplorer!</h1>
+        <p>🌟 ¡Aventuras esperan! Únete a nosotros para descubrir curiosidades, hacer manualidades y explorar la naturaleza. Cada clic es una nueva oportunidad para aprender y divertirse. 🌟</p>
+    </header>
+
+    <!-- Menús de navegación -->
+    <nav>
+        <div class="top-menu">
+            <h3>Menú </h3>
+            <a href="#animales">Animales</a>
+            <a href="#espacio">Espacio</a>
+            <a href="#naturaleza">Naturaleza</a>
+            <a href="#manualidades">Manualidades</a>
+            <a href="#recursos">Recursos</a>
+            <a href="#actividades">Actividades</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <aside class="side-menu">
+        <h3>Categorías</h3>
+        <ul>
+            <li><a href="categorias/animales.html">Animales</a></li>
+            <li><a href="categorias/espacio.html">Espacio</a></li>
+            <li><a href="categorias/naturaleza.html">Naturaleza</a></li>
+            <li><a href="categorias/manualidades.html">Manualidades</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Descubre Nuestras Categorías</h2>
+        <div class="card" id="animales">
+            <h3><a href="categorias/animales.html">Animales</a></h3>
+            <img src="assets/icons/animales.png" alt="Animales">
+            <p>Descubre una variedad de animales y sus sonidos.</p>
+        </div>
+
+        <div class="card" id="espacio">
+            <h3><a href="categorias/espacio.html">Espacio</a></h3>
+            <img src="assets/icons/espacio.png" alt="Espacio">
+            <p>Aprende sobre los planetas y el universo.</p>
+        </div>
+
+        <div class="card" id="naturaleza">
+            <h3><a href="categorias/naturaleza.html">Naturaleza</a></h3>
+            <img src="assets/icons/naturaleza.png" alt="Naturaleza">
+            <p>Explora los hermosos paisajes y ecosistemas.</p>
+        </div>
+
+        <div class="card" id="manualidades">
+            <h3><a href="categorias/manualidades.html">Manualidades</a></h3>
+            <img src="assets/icons/manualidades.png" alt="Manualidades">
+            <p>¡Diviértete creando y aprendiendo manualidades!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BabyExplorer</p>
+    </footer>
+
+    <script src="assets/js/scripts.js"></script>
+    <script>
+        // JavaScript para aplicar estilos a la primera y segunda tarjeta
+        document.addEventListener("DOMContentLoaded", function() {
+            const cards = document.querySelectorAll('.card');
+
+            if (cards.length > 0) {
+                // Aplicar estilos a la primera tarjeta
+                cards[0].classList.add('highlight');
+
+                // Aplicar estilos a la segunda tarjeta
+                if (cards.length > 1) {
+                    cards[1].classList.add('emphasized');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
